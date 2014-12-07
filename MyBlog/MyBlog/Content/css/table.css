@@ -1,0 +1,15 @@
+﻿table{
+ border-collapse:collapse;
+ width:640px;
+}
+td:first-child{
+ padding-left:10px;
+ padding-right:10px;
+}
+td:last-child{
+font-style:italic;
+ text-align:left;
+}
+td{
+ padding:10px;
+}

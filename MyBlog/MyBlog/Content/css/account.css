@@ -1,0 +1,21 @@
+
+.login-form,
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="submit"]{ font-weight:bold; font-size:12px; font-family:"Tahoma", sans-serif; }
+.login-form input[type="checkbox"]{ vertical-align:middle; margin-right:5px;}
+/***************************************/
+.forma{ box-sizing:border-box; background:#ffffff; width:340px; height:500px; padding-left:20px; padding-right:20px; padding-top:10px; }
+h1{ margin:0; font-size:20px; text-transform:uppercase; }
+
+#l,#p{ width:265px; margin:0; border:2px solid #68afaf; background:url(../Images/icon-user.png) #f9f6f3 no-repeat 270px 10px; padding:10px 15px; margin-top:15px; }
+    
+#p{ background:url(../Images/icon-lock.png) no-repeat 270px 10px #f9f6f3; margin-top:10px }
+
+label{ display:inline-block; }
+
+/*.che{ padding-top:15px; width:300px; }
+
+.ss{ float:right; color:black; }*/
+
+#but{ width:300px; margin-left:0px;  margin-top:15px; margin-bottom:15px; background:#68afaf; color:#fff; padding:15px 0px; border:none; }

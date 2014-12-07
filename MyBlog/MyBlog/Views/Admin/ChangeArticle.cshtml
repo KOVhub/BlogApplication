@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Добавление / Редактирование поста";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model MyBlog.Models.PostModel
+
+@using (Html.BeginForm("ChangeArticle", "Admin", new { title = Model.Title }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="add-post">
+
+        @Html.LabelFor(m => m.Title)
+        @Html.TextBoxFor(m => m.Title, new { placeholder = Html.DisplayNameFor(m => m.Title) })
+        @Html.ValidationMessageFor(m => m.Title)
+
+        <br />
+        @Html.LabelFor(m => m.Content)
+        @Html.TextAreaFor(m => m.Content, new { placeholder = Html.DisplayNameFor(m => m.Content), @class = "txt-area" })
+        @Html.ValidationMessageFor(m => m.Content)
+
+        @Html.HiddenFor(m => m.DateCreated)
+
+
+        <div class="wrap-btn">
+            <button class="btn-save">Сохранить</button>
+        </div>
+    </div>
+}
+

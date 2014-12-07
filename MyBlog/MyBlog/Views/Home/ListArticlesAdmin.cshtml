@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Список статей";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using PagedList.Mvc;
+@model PagedList.IPagedList<MyBlog.Models.PostModel>
+
+@Html.ActionLink("Добавить новую статью", "CreateArticle", "Admin")
+<hr />
+
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink("" + item.Title + "", "Index", "Home", new { title = item.Title }, null)
+            </td>
+            <td>
+                @item.DateCreated.ToString("d MMMM yyyy HH:mm")
+            </td>
+            <td width="70px">
+                @Html.ActionLink("Изменить", "ChangeArticle", "Admin", new { title = item.Title }, null)
+            </td>
+            <td width="70px">
+                @Html.ActionLink("Удалить", "RemoveArticle", "Admin", new { title = item.Title }, null)
+            </td>
+        </tr>
+    }
+</table>
+<br />
+
+Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("ListArticles", new { page }))

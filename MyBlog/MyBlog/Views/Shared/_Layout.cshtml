@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title - Блог Павла Дурова</title>
+    <link rel="stylesheet" href="~/Content/css/reset.css">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <link rel="stylesheet" href="~/Content/css/account.css">
+    <link rel="stylesheet" href="~/Content/css/PagedList.css">
+    <link rel="stylesheet" href="~/Content/css/table.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="left-column">
+            <div class="wrap-avatar">
+                <img src="~/Content/Images/avatar.png" alt="" />
+                <h2>Павел Дуров</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>@Html.ActionLink("Главная", "Index", "Home", routeValues: new { title = "" }, htmlAttributes: null)</li>
+                    <li>@Html.ActionLink("Статьи", "ListArticles", "Home")</li>
+                    <li>@Html.ActionLink("О Себе", "About", "Home")</li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Выйти", "Logoff", "Account")</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Войти", "Login", "Account")</li>
+                    }
+                </ul>
+            </div>
+
+            @*<div class="search-form">
+                <input type="text" />
+                <button></button>
+            </div>*@
+
+            @Html.Partial("~/Views/Home/RecentPosts.cshtml")
+            @Html.Partial("~/Views/Home/RecentComments.cshtml")
+        </div>
+        <div class="right-column">
+            @RenderBody()
+        </div>
+    </div>
+ 
+       @*<li>@Html.Action("RecentPosts&RecentComments", "Home", routeValues: null)</li> //таким образом можно вызывать методконтроллера из вьюшки*@
+
+</body>
+
+</html>

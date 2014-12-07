@@ -1,0 +1,80 @@
+a {color: #4f9a9a; text-decoration: none;}
+p {color: #505050; font-size: 14px;}
+
+body {background: #eeeeee;}
+.wrap {font-family: Tahoma; overflow: hidden; padding-bottom: 15px; background: #fff; box-shadow: 0 0 4px 2px #dfdfdf; margin-bottom: 60px;}
+
+.left-column {float: left; width: 280px;}
+.right-column {overflow: hidden; padding: 20px 40px 0 20px;} 
+
+.wrap-article h2 {color: #68afaf; font-size: 24px; text-transform: uppercase; font-weight: normal; line-height: 28px; margin-bottom: 20px;}
+.wrap-article .date {padding-left: 30px; background: url(../Images/date-article.png) no-repeat 0 50%; line-height: 20px; font-size: 18px; color: #c1c1c1;}
+.wrap-article .date span {display: inline-block; margin-right: 18px;}
+.wrap-article .text-block p {margin-top: 25px; line-height: 24px;}
+
+.wrap-soc-list {padding: 15px 0; overflow: hidden;}
+.wrap-soc-list ul {float: right;}
+.wrap-soc-list ul li {float: left; margin-left: 17px; list-style: none;}
+.wrap-soc-list ul li a {display: block; font-size: 16px; color: #a4a4a4; vertical-align: middle; line-height: 28px;}
+.wrap-soc-list ul li span {margin-left: 5px;}
+.wrap-soc-list ul li span,.wrap-soc-list ul li img  {vertical-align: middle}
+
+.wrap-comments h2 {line-height: 43px; padding-left: 11px; color: #fff; background: #75af68; font-weight: normal; font-size: 24px;}
+.wrap-comments .list-comment li {list-style: none; overflow: hidden; padding: 20px 0 20px; margin-bottom: 10px; border-bottom: 1px solid #e2e2e2;}
+.wrap-comments .list-comment li .avatar {float: left; padding-right: 10px;}
+.wrap-comments .list-comment li .comment-text {overflow: hidden;}
+.wrap-comments .list-comment li .comment-text .name-user {color: #4f9a9a; text-decoration: none;}
+.wrap-comments .list-comment li .date {color: #959595}
+.wrap-comments .list-comment li .date span {display: inline-block; margin-right: 20px; padding: 7px 0;}
+
+.add-comment {padding-top: 10px;}
+.add-comment .txt-area {width: 100%; padding: 10px; height: 90px; border-radius: 5px; border-color: #dcdcdc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;}
+
+.add-post .txt-area {width: 100%; padding: 10px; height: 500px; border-radius: 5px; border-color: #dcdcdc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;}
+
+textarea::-webkit-input-placeholder {color: #ced7d7;}
+textarea:-moz-placeholder {color: #ced7d7;}
+textarea::-moz-placeholder {color: #ced7d7;}
+textarea:-ms-input-placeholder {color: #ced7d7;}
+
+.wrap-btn {padding-top: 17px; overflow: hidden;}
+.wrap-btn button {float: right;}
+.wrap-btn p {line-height: 43px;}
+.wrap-btn .btn-cancel {background: #b9b9b9; color: #fff; border-radius: 5px; border: 0; height: 43px; padding: 0 26px; margin-left: 10px;}
+.wrap-btn .btn-save {background: #68afaf; color: #fff; border-radius: 5px; border: 0; height: 43px; padding: 0 26px;}
+
+.wrap-avatar {padding: 30px 0; text-align: center; background: #7c9595}
+.wrap-avatar img {margin-bottom: 20px}
+.wrap-avatar h2 {font-size: 30px; color: #fff; font-weight: normal;}
+
+.menu {padding: 30px 20px;}
+.menu li a {font-size: 20px; color: #68afaf; text-decoration: none}
+.menu li {list-style: none; padding: 10px 20px; line-height: 20px; position: relative;}
+.menu li:after {content: ''; width: 9px; height: 15px; position: absolute; left: 0; top: 13px; background: url(../Images/arrow.png) no-repeat 0 0;}
+
+.search-form {margin: 0 0 35px 20px; overflow: hidden; white-space: nowrap; border: 1px solid #d9d9d9; border-radius: 5px; display: inline-block}
+.search-form input {height: 44px; width: 184px; float: left; vertical-align: middle; border-color: transparent;}
+.search-form button {width: 55px; height: 48px;float: left; vertical-align: middle; margin-left: -6px; border: 0; background: url(../Images/seach-ico.png) no-repeat center #68afaf}
+
+.posts-wrap h3 {line-height: 42px; background: #68af93; font-size: 20px; color: #fff; font-weight: normal; padding-left: 20px;}
+.posts-wrap.color h3 {background: #75af68;}
+.posts-wrap ul {padding: 0 0 50px 20px;}
+.posts-wrap li {padding-top: 20px; list-style: none;}
+.posts-wrap li .date {color: #959595; font-size: 14px; margin-bottom: 5px;}
+.posts-wrap li .post {font-size: 16px;}
+
+.img-center img {display: block; margin-left: auto; margin-right: auto;}
+
+
+@media screen and (min-width: 980px) {
+    .wrap {width: 980px; margin: 0 auto 60px;}
+}
+
+
+

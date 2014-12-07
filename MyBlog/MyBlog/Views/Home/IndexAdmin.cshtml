@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Главная";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using MyBlog.Models
+@model ArticleModel
+
+<div class="wrap-article">
+    @if (Model.Post != null)
+    {
+        <h2>@Model.Post.Title</h2>
+        <p class="date"><span>@Model.Post.DateCreated.ToString("d MMMM yyyy")</span><span>@Model.Post.DateCreated.ToString("HH:mm")</span></p>
+        <div class="text-block">
+            <p>@Html.Raw(Model.Post.Content)</p>
+        </div>
+    }
+</div>
+<br />
+@Html.ActionLink("Читать другие статьи", "ListArticles", "Home")
+<br /><br />
+
+@*<div class="wrap-soc-list">
+        <ul>
+            <li><a href="#"><img src="~/Content/Images/fc-ico.png" alt="" /><span>123</span></a></li>
+            <li><a href="#"><img src="~/Content/Images/fc-ico.png" alt="" /><span>123</span></a></li>
+            <li><a href="#"><img src="~/Content/Images/fc-ico.png" alt="" /><span>123</span></a></li>
+        </ul>
+    </div>*@
+
+<div class="wrap-comments">
+    <h2>Комментарии</h2>
+    <ul class="list-comment">
+        @if (Model.Comments != null)
+        {
+            foreach (var item in Model.Comments)
+            {
+                <li>
+                    <div class="avatar"><img src="~/Content/images/avatar-comment.png" alt="" /></div>
+                    <div class="comment-text">
+                        @Html.Hidden((item.CommentId).ToString())
+                        <p class="name-user">@item.User.Name</p>
+                        <p class="date"><span>@item.DateAdded.ToString("d MMMM yyyy")</span><span>@item.DateAdded.ToString("HH:mm")</span></p>
+                        <p>@item.Content</p>
+                        @Html.ActionLink("Удалить", "RemoveComment", "Admin", new { id = item.CommentId, title = Model.Post.Title }, null)
+                    </div>
+                </li>
+            }
+        }
+    </ul>
+    @Html.Partial("~/Views/Home/AddComment.cshtml")
+</div>

@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Вход";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model MyBlog.Models.UserModel
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "login-form", name = "LoginForm", id = "LoginForm", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="forma">
+        <h1>Используйте учетную запись, чтобы войти</h1>
+
+        <br />
+        @Html.ValidationSummary(true)
+        
+        @Html.TextBoxFor(m => m.Email, new { id = "l", placeholder = Html.DisplayNameFor(m => m.Email) })
+        @Html.ValidationMessageFor(m => m.Email)
+        
+        @Html.PasswordFor(m => m.Password, new { id = "p", placeholder = Html.DisplayNameFor(m => m.Password) })
+        @Html.ValidationMessageFor(m => m.Password)
+              
+        <button id="but">ВОЙТИ</button>
+        
+        @Html.ActionLink("ЗАРЕГИСТРИРОВАТЬСЯ", "Register", "Account")
+    </div>
+}
+
+@*<div class=che>
+
+    <input type=checkbox id=ch>
+    <label for=ch>ЗАПОМНИТЬ МЕНЯ</label>
+
+    <a class=ss href="#">Я ЗАБЫЛ ПАРОЛЬ</a>
+</div>*@
