@@ -8,11 +8,12 @@
 .forma{ box-sizing:border-box; background:#ffffff; width:340px; height:500px; padding-left:20px; padding-right:20px; padding-top:10px; }
 h1{ margin:0; font-size:20px; text-transform:uppercase; }
 
-#l,#p{ width:265px; margin:0; border:2px solid #68afaf; background:url(../Images/icon-user.png) #f9f6f3 no-repeat 270px 10px; padding:10px 15px; margin-top:15px; }
-    
-#p{ background:url(../Images/icon-lock.png) no-repeat 270px 10px #f9f6f3; margin-top:10px }
-
-label{ display:inline-block; }
+#l,#l2,#p,#p2{ width:265px; border:2px solid #68afaf; }
+#l,#l2{background:url(../Images/icon-user.png) #f9f6f3 no-repeat 270px 10px;}    
+#p,#p2{ background:url(../Images/icon-lock.png) no-repeat 270px 10px #f9f6f3; }
+#l, #p {margin:0; padding:10px 15px; }
+#l2, #p2 {margin:10px 0px; padding:10px 15px; }
+label{ display:block}
 
 /*.che{ padding-top:15px; width:300px; }
 

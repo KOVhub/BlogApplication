@@ -7,8 +7,8 @@
 @using (Html.BeginForm("AddComment", "Home", new { title = Model.Post.Title }, FormMethod.Post, new { name = "AddCommentForm", id = "CommentForm", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
-    
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
     <div class="add-comment">
         @Html.ValidationMessageFor(m => m.NewComment.Content)
         @Html.TextAreaFor(m => m.NewComment.Content, new { placeholder = "Ваш комментарий", @class = "txt-area" })

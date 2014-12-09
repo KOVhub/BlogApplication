@@ -41,3 +41,46 @@ C:\Users\o1eq\documents\visual studio 2013\Projects\MyBlog\MyBlog\bin\HtmlSaniti
 C:\Users\o1eq\documents\visual studio 2013\Projects\MyBlog\MyBlog\bin\AntiXssLibrary.xml
 C:\Users\o1eq\documents\visual studio 2013\Projects\MyBlog\MyBlog\bin\HtmlSanitizationLibrary.xml
 C:\Users\o1eq\documents\visual studio 2013\Projects\MyBlog\MyBlog\obj\Debug\MyBlog.Migrations.AddRole.resources
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\MyBlog.dll.config
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\MyBlog.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\MyBlog.pdb
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\AntiXssLibrary.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\Antlr3.Runtime.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\EntityFramework.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\EntityFramework.SqlServer.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\HtmlSanitizationLibrary.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\Microsoft.Web.Infrastructure.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\Newtonsoft.Json.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\PagedList.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\PagedList.Mvc.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.Helpers.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.Mvc.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.Optimization.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.Razor.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.WebPages.Deployment.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.WebPages.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.WebPages.Razor.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\WebGrease.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\AntiXssLibrary.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\EntityFramework.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\EntityFramework.SqlServer.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\HtmlSanitizationLibrary.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\PagedList.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\PagedList.Mvc.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.Helpers.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.Mvc.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.Optimization.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.Razor.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.WebPages.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.WebPages.Deployment.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\System.Web.WebPages.Razor.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\Antlr3.Runtime.pdb
+C:\GIT\BlogApplication\MyBlog\MyBlog\bin\Newtonsoft.Json.xml
+C:\GIT\BlogApplication\MyBlog\MyBlog\obj\Debug\MyBlog.csprojResolveAssemblyReference.cache
+C:\GIT\BlogApplication\MyBlog\MyBlog\obj\Debug\MyBlog.Migrations.AddUser.resources
+C:\GIT\BlogApplication\MyBlog\MyBlog\obj\Debug\MyBlog.Migrations.AddRole.resources
+C:\GIT\BlogApplication\MyBlog\MyBlog\obj\Debug\MyBlog.Resources.DisplayNamesValidation.resources
+C:\GIT\BlogApplication\MyBlog\MyBlog\obj\Debug\MyBlog.Resources.ErrorMessagesValidation.resources
+C:\GIT\BlogApplication\MyBlog\MyBlog\obj\Debug\MyBlog.csproj.GenerateResource.Cache
+C:\GIT\BlogApplication\MyBlog\MyBlog\obj\Debug\MyBlog.dll
+C:\GIT\BlogApplication\MyBlog\MyBlog\obj\Debug\MyBlog.pdb

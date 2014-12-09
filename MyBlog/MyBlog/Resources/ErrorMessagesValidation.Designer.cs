@@ -61,11 +61,20 @@ namespace MyBlog.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Возраст введён не верно.
+        ///   Looks up a localized string similar to {0} и {0} не совпадают.
         /// </summary>
-        public static string InvalidAge {
+        public static string ConfirmPasswordTemplate {
             get {
-                return ResourceManager.GetString("InvalidAge", resourceCulture);
+                return ResourceManager.GetString("ConfirmPasswordTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} содержит недопустимые символы.
+        /// </summary>
+        public static string EmailRegularTemplate {
+            get {
+                return ResourceManager.GetString("EmailRegularTemplate", resourceCulture);
             }
         }
         
@@ -75,6 +84,24 @@ namespace MyBlog.Resources {
         public static string RequiredTemplate {
             get {
                 return ResourceManager.GetString("RequiredTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Поле {0} должно быть не более чем {1} символов в длину.
+        /// </summary>
+        public static string StringLengthMaxTemplate {
+            get {
+                return ResourceManager.GetString("StringLengthMaxTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Поле {0} должно быть по крайне мере {2} символов в длину, но не более чем {1} символов.
+        /// </summary>
+        public static string StringLengthTemplate {
+            get {
+                return ResourceManager.GetString("StringLengthTemplate", resourceCulture);
             }
         }
     }

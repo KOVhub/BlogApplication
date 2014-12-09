@@ -11,7 +11,7 @@ namespace MyBlog.Models
     {
         [Required(ErrorMessageResourceType = typeof(ErrorMessagesValidation), ErrorMessageResourceName = "RequiredTemplate")]
         [Display(ResourceType = typeof(DisplayNamesValidation), Name = "Comment")]
-        [StringLength(200)]
+        [StringLength(100, ErrorMessageResourceType = typeof(ErrorMessagesValidation), ErrorMessageResourceName = "StringLengthMaxTemplate")]
         public string Content { get; set; }
     }
 }

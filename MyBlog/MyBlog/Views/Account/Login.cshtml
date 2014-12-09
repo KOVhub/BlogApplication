@@ -13,12 +13,12 @@
         <h1>Используйте учетную запись, чтобы войти</h1>
 
         <br />
-        @Html.ValidationSummary(true)
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         
-        @Html.TextBoxFor(m => m.Email, new { id = "l", placeholder = Html.DisplayNameFor(m => m.Email) })
+        @Html.TextBoxFor(m => m.Email, new { id = "l2", placeholder = Html.DisplayNameFor(m => m.Email) })
         @Html.ValidationMessageFor(m => m.Email)
         
-        @Html.PasswordFor(m => m.Password, new { id = "p", placeholder = Html.DisplayNameFor(m => m.Password) })
+        @Html.PasswordFor(m => m.Password, new { id = "p2", placeholder = Html.DisplayNameFor(m => m.Password) })
         @Html.ValidationMessageFor(m => m.Password)
               
         <button id="but">ВОЙТИ</button>
@@ -26,11 +26,3 @@
         @Html.ActionLink("ЗАРЕГИСТРИРОВАТЬСЯ", "Register", "Account")
     </div>
 }
-
-@*<div class=che>
-
-    <input type=checkbox id=ch>
-    <label for=ch>ЗАПОМНИТЬ МЕНЯ</label>
-
-    <a class=ss href="#">Я ЗАБЫЛ ПАРОЛЬ</a>
-</div>*@
