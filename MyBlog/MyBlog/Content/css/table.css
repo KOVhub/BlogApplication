@@ -8,7 +8,7 @@ td:first-child{
 }
 td:last-child{
 font-style:italic;
- text-align:left;
+ text-align:right;
 }
 td{
  padding:10px;

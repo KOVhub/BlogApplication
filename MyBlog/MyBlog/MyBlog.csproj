@@ -146,10 +146,10 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AddCommentModel.cs" />
     <Compile Include="Models\ArticleModel.cs" />
+    <Compile Include="Models\RecentCommentModel.cs" />
     <Compile Include="Models\CommentModel.cs" />
     <Compile Include="Models\PostModel.cs" />
-    <Compile Include="Models\RecentCommentsModel.cs" />
-    <Compile Include="Models\RecentPostsModel.cs" />
+    <Compile Include="Models\RecentsPostsCommentsModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
