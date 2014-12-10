@@ -126,12 +126,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="CurrentUserService.cs" />
+    <Compile Include="Repository\CurrentUserService.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -146,6 +147,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AddCommentModel.cs" />
     <Compile Include="Models\ArticleModel.cs" />
+    <Compile Include="Models\PostChangeModel.cs" />
     <Compile Include="Models\RecentCommentModel.cs" />
     <Compile Include="Models\CommentModel.cs" />
     <Compile Include="Models\PostModel.cs" />
@@ -193,6 +195,15 @@
     <Content Include="Content\css\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -257,6 +268,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Errors\HttpError.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout_Valid.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

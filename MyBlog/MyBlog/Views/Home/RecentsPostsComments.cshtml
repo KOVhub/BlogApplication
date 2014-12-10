@@ -13,7 +13,7 @@
             @foreach (var item in Model.RecentPosts)
             {
                 <li>
-                    <p class="date">@item.DateCreated.ToString("d MMMM yyyy")</p>
+                    <p class="date">@item.DateCreated.ToString("d MMMM yyyy") <span>@item.DateCreated.ToString("HH:mm")</span></p>
                     <p class="post">
                         @Html.ActionLink(item.Title, "Index", "Home", new { title = item.Title }, null)
                     </p>

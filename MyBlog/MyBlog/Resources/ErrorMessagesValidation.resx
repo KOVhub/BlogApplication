@@ -121,7 +121,7 @@
     <value>{0} и {0} не совпадают</value>
   </data>
   <data name="EmailRegularTemplate" xml:space="preserve">
-    <value>{0} содержит недопустимые символы</value>
+    <value>{0} содержит недопустимый формат</value>
   </data>
   <data name="RequiredTemplate" xml:space="preserve">
     <value>Пожалуйста, введите {0}</value>
@@ -130,6 +130,6 @@
     <value>Поле {0} должно быть не более чем {1} символов в длину</value>
   </data>
   <data name="StringLengthTemplate" xml:space="preserve">
-    <value>Поле {0} должно быть по крайне мере {2} символов в длину, но не более чем {1} символов</value>
+    <value>Введите {0} от {2} до {1} символов</value>
   </data>
 </root>

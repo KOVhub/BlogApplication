@@ -20,33 +20,36 @@ namespace MyBlog.Controllers
         [AllowAnonymous]
         public ActionResult RecentsPostsComments()
         {
-            var db = new BlogDbContext();
-            var recentPosts = db.Posts.OrderByDescending(p => p.PostId).Take(3);
-            var recentComments = db.Comments.OrderByDescending(p => p.CommentId).Take(3);
-
-            var recentPostsModel = new Collection<PostModel>();
-            var recentCommentsModel = new Collection<RecentCommentModel>();
-
-            if (recentPosts != null && recentPosts.Any())
-            {               
-                foreach (var item in recentPosts)
-                {
-                    var post = new PostModel(item.Title, null, item.DateCreated);
-                    recentPostsModel.Add(post);
-                }
-            }
-
-            if (recentComments != null && recentComments.Any())
+            using (var db = new BlogDbContext())
             {
-                foreach (var item in recentComments)
-                {
-                    var comment = new RecentCommentModel(item.Content, item.DateAdded, item.Post.Title);
-                    recentCommentsModel.Add(comment);
-                }
-            }
+                var recentPosts = db.Posts.OrderByDescending(p => p.PostId).Take(3);
+                var recentComments = db.Comments.OrderByDescending(p => p.CommentId).Take(3);
 
-            var recentsModel = new RecentsPostsCommentsModel(recentPostsModel, recentCommentsModel);
-            return PartialView("RecentsPostsComments", recentsModel);
+                var recentPostsModel = new Collection<PostModel>();
+                var recentCommentsModel = new Collection<RecentCommentModel>();
+
+                if (recentPosts != null && recentPosts.Any())
+                {
+                    foreach (var item in recentPosts)
+                    {
+                        var post = new PostModel(item.Title, null, item.DateCreated);
+                        recentPostsModel.Add(post);
+                    }
+                }
+
+                if (recentComments != null && recentComments.Any())
+                {
+                    foreach (var item in recentComments)
+                    {
+                        var postCom = db.Posts.Find(item.PostId);
+                        var comment = new RecentCommentModel(item.Content, item.DateAdded, postCom.Title);
+                        recentCommentsModel.Add(comment);
+                    }
+                }
+
+                var recentsModel = new RecentsPostsCommentsModel(recentPostsModel, recentCommentsModel);
+                return PartialView("RecentsPostsComments", recentsModel);
+            }
         }
 
         [HttpGet]

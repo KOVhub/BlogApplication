@@ -70,7 +70,7 @@ namespace MyBlog.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} содержит недопустимые символы.
+        ///   Looks up a localized string similar to {0} содержит недопустимый формат.
         /// </summary>
         public static string EmailRegularTemplate {
             get {
@@ -97,7 +97,7 @@ namespace MyBlog.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Поле {0} должно быть по крайне мере {2} символов в длину, но не более чем {1} символов.
+        ///   Looks up a localized string similar to Введите {0} от {2} до {1} символов.
         /// </summary>
         public static string StringLengthTemplate {
             get {

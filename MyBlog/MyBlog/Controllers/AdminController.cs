@@ -61,7 +61,7 @@ namespace MyBlog.Controllers
                     var post = db.Posts.Where(p => p.Title == title).FirstOrDefault();
                     if (post != null)
                     {
-                        var postModel = new PostModel(post.Title, post.Content, post.DateCreated);
+                        var postModel = new PostChangeModel(post.PostId, post.Title, post.Content);
                         return View("ChangeArticle", postModel);
                     }
                     else
@@ -79,13 +79,13 @@ namespace MyBlog.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "ADMIN")]
-        public ActionResult ChangeArticle(PostModel model)
+        public ActionResult ChangeArticle(PostChangeModel model)
         {
             if (model.Title != null && model.Content != null && ModelState.IsValid)
             {
                 using (var db = new BlogDbContext())
                 {
-                    var postChange = db.Posts.Where(p => p.DateCreated == model.DateCreated).FirstOrDefault();
+                    var postChange = db.Posts.Find(model.PostId);
                     
                     if (postChange == null)
                     {

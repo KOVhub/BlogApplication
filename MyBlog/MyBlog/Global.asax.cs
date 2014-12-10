@@ -1,4 +1,5 @@
 ﻿using Authentication;
+using MyBlog.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,14 +18,15 @@ namespace MyBlog
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        protected void Application_Error(object sender, EventArgs e)
-        {
-            //Exception ex = Server.GetLastError();
+        //protected void Application_Error(object sender, EventArgs e)
+        //{
+        //    //Exception ex = Server.GetLastError();
 
-            Response.Redirect("/Errors/HttpError");
-        }
+        //    Response.Redirect("/Errors/HttpError");
+        //}
 
         protected void Application_AuthenticateRequest(Object sender, EventArgs e)
         {

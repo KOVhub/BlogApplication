@@ -1,9 +1,9 @@
 ﻿@{
     ViewBag.Title = "Добавление / Редактирование поста";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout_Valid.cshtml";
 }
 
-@model MyBlog.Models.PostModel
+@model MyBlog.Models.PostChangeModel
 
 @using (Html.BeginForm("ChangeArticle", "Admin", new { title = Model.Title }, FormMethod.Post))
 {
@@ -21,7 +21,7 @@
         @Html.TextAreaFor(m => m.Content, new { placeholder = Html.DisplayNameFor(m => m.Content), @class = "txt-area" })
         @Html.ValidationMessageFor(m => m.Content)
 
-        @Html.HiddenFor(m => m.DateCreated)
+        @Html.HiddenFor(m => m.PostId)
 
 
         <div class="wrap-btn">
