@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+
+@using MyBlog.Models
+@model RecentsPostsCommentsModel
+
+<div class="posts-wrap">
+    @if (Model.RecentPosts != null && Model.RecentPosts.Any())
+    {
+        <h3>Последние Статьи</h3>
+        <ul>
+            @foreach (var item in Model.RecentPosts)
+            {
+                <li>
+                    <p class="date">@item.DateCreated.ToString("d MMMM yyyy")</p>
+                    <p class="post">
+                        @Html.ActionLink(item.Title, "Index", "Home", new { title = item.Title }, null)
+                    </p>
+                </li>
+            }
+        </ul>
+    }
+</div>
+
+<div class="posts-wrap color">
+    @if (Model.RecentComments != null && Model.RecentComments.Any())
+    {
+        <h3>Последние Комментарии</h3>
+        <ul>
+        @foreach (var item in Model.RecentComments)
+        {
+            <li>
+                <p class="date">@item.DateAdded.ToString("d MMMM yyyy") <span>@item.DateAdded.ToString("HH:mm")</span></p>
+                <p class="post">
+                    @Html.ActionLink(item.Content, "Index", "Home", new { title = item.PostTitle }, null)
+                </p>
+            </li>
+        }
+        </ul>
+    }
+</div>

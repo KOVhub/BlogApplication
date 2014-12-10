@@ -17,11 +17,44 @@ namespace MyBlog.Controllers
     public class HomeController : Controller
     {
         [HttpGet]
+        [AllowAnonymous]
+        public ActionResult RecentsPostsComments()
+        {
+            var db = new BlogDbContext();
+            var recentPosts = db.Posts.OrderByDescending(p => p.PostId).Take(3);
+            var recentComments = db.Comments.OrderByDescending(p => p.CommentId).Take(3);
+
+            var recentPostsModel = new Collection<PostModel>();
+            var recentCommentsModel = new Collection<RecentCommentModel>();
+
+            if (recentPosts != null && recentPosts.Any())
+            {               
+                foreach (var item in recentPosts)
+                {
+                    var post = new PostModel(item.Title, null, item.DateCreated);
+                    recentPostsModel.Add(post);
+                }
+            }
+
+            if (recentComments != null && recentComments.Any())
+            {
+                foreach (var item in recentComments)
+                {
+                    var comment = new RecentCommentModel(item.Content, item.DateAdded, item.Post.Title);
+                    recentCommentsModel.Add(comment);
+                }
+            }
+
+            var recentsModel = new RecentsPostsCommentsModel(recentPostsModel, recentCommentsModel);
+            return PartialView("RecentsPostsComments", recentsModel);
+        }
+
+        [HttpGet]
         public ActionResult Index(string title)
         {
             using (var db = new BlogDbContext())
             {
-                var post = (title == null) ? db.Posts.OrderByDescending(p => p.PostId).FirstOrDefault() : 
+                var post = (title == null) ? db.Posts.OrderByDescending(p => p.PostId).FirstOrDefault() :
                     db.Posts.Where(p => p.Title == title).FirstOrDefault();
                 if (post != null)
                 {
@@ -33,7 +66,7 @@ namespace MyBlog.Controllers
                         foreach (var item in post.Comments)
                         {
                             var userModel = new UserModel(item.User.UserId, item.User.Name, item.User.Email, item.User.Password, item.User.UserRole);
-                            commentCollectionModel.Add(new CommentModel(item.CommentId, item.Content, item.DateAdded, userModel));      
+                            commentCollectionModel.Add(new CommentModel(item.CommentId, item.Content, item.DateAdded, userModel));
                         }
                     }
 
@@ -52,7 +85,7 @@ namespace MyBlog.Controllers
                 }
                 else
                 {
-                    return View("HttpError","Errors");
+                    return View("HttpError", "Errors");
                 }
             }
         }

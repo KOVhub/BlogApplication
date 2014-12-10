@@ -22,7 +22,7 @@ namespace MyBlog
         protected void Application_Error(object sender, EventArgs e)
         {
             //Exception ex = Server.GetLastError();
-            
+
             Response.Redirect("/Errors/HttpError");
         }
 

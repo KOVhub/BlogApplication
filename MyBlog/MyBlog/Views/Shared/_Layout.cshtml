@@ -18,9 +18,11 @@
                 <img src="~/Content/Images/avatar.png" alt="" />
                 <h2>Павел Дуров</h2>
             </div>
+            
             <div class="menu">
                 <ul>
-                    <li>@Html.ActionLink("Главная", "Index", "Home", routeValues: new { title = "" }, htmlAttributes: null)</li>
+                    <li><a href="~/Home/Index">Главная</a></li>
+                    @*<li>@Html.ActionLink("Главная", "Index", "Home", routeValues: new { title = "" }, htmlAttributes: null)</li>*@
                     <li>@Html.ActionLink("Статьи", "ListArticles", "Home")</li>
                     <li>@Html.ActionLink("О Себе", "About", "Home")</li>
                     @if (Request.IsAuthenticated)
@@ -39,16 +41,14 @@
                 <button></button>
             </div>*@
 
-            @Html.Partial("~/Views/Home/RecentPosts.cshtml")
-            @Html.Partial("~/Views/Home/RecentComments.cshtml")
+            @Html.Action("RecentsPostsComments", "Home")
+
         </div>
+
         <div class="right-column">
             @RenderBody()
         </div>
+
     </div>
- 
-       @*<li>@Html.Action("RecentPosts&RecentComments", "Home", routeValues: null)</li> //таким образом можно вызывать методконтроллера из вьюшки*@
-
 </body>
-
 </html>
