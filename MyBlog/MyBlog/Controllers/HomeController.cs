@@ -22,11 +22,8 @@ namespace MyBlog.Controllers
         {
             using (var db = new BlogDbContext())
             {
-                var recentPosts = db.Posts.OrderByDescending(p => p.PostId).Take(3);
-                var recentComments = db.Comments.OrderByDescending(p => p.CommentId).Take(3);
-
+                var recentPosts = db.Posts.OrderByDescending(p => p.PostId).Take(3);                
                 var recentPostsModel = new Collection<PostModel>();
-                var recentCommentsModel = new Collection<RecentCommentModel>();
 
                 if (recentPosts != null && recentPosts.Any())
                 {
@@ -37,18 +34,23 @@ namespace MyBlog.Controllers
                     }
                 }
 
+                var recentComments = db.Comments.OrderByDescending(p => p.CommentId).Take(3);
+                var recentCommentsModel = new Collection<RecentCommentModel>();
+
                 if (recentComments != null && recentComments.Any())
                 {
                     foreach (var item in recentComments)
                     {
-                        var postCom = db.Posts.Find(item.PostId);
+                        //var comment = new RecentCommentModel(item.Content, item.DateAdded, item.Post.Title);
+                        var dbCon = new BlogDbContext();
+                        var postCom = dbCon.Posts.Find(item.PostId);
                         var comment = new RecentCommentModel(item.Content, item.DateAdded, postCom.Title);
                         recentCommentsModel.Add(comment);
                     }
                 }
 
                 var recentsModel = new RecentsPostsCommentsModel(recentPostsModel, recentCommentsModel);
-                return PartialView("RecentsPostsComments", recentsModel);
+                return View(recentsModel);
             }
         }
 
@@ -88,7 +90,7 @@ namespace MyBlog.Controllers
                 }
                 else
                 {
-                    return View("HttpError", "Errors");
+                    return RedirectToAction("HttpError", "Errors");
                 }
             }
         }

@@ -169,7 +169,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ErrorMessagesValidation.resx</DependentUpon>
     </Compile>
-    <Compile Include="UserAccountDAO.cs" />
+    <Compile Include="Repository\UserAccountDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Blog.mdf" />
@@ -189,6 +189,25 @@
     <Content Include="Content\Images\fc-ico.png" />
     <Content Include="Content\Images\icon-lock.png" />
     <Content Include="Content\Images\icon-user.png" />
+    <Content Include="Content\Images\PostsImages\post01.1.jpg" />
+    <Content Include="Content\Images\PostsImages\post02.1.jpg" />
+    <Content Include="Content\Images\PostsImages\post03.1.jpg" />
+    <Content Include="Content\Images\PostsImages\post04.1.jpg" />
+    <Content Include="Content\Images\PostsImages\post05.1.jpg" />
+    <Content Include="Content\Images\PostsImages\post06.1.jpg" />
+    <Content Include="Content\Images\PostsImages\post07.1.jpg" />
+    <Content Include="Content\Images\PostsImages\post08.1.jpg" />
+    <Content Include="Content\Images\PostsImages\post09.1.jpg" />
+    <Content Include="Content\Images\PostsImages\post10.1.jpg" />
+    <Content Include="Content\Images\PostsImages\post10.2.jpg" />
+    <Content Include="Content\Images\PostsImages\post11.1.jpg" />
+    <Content Include="Content\Images\PostsImages\post12.1.jpg" />
+    <Content Include="Content\Images\PostsImages\post12.2.jpg" />
+    <Content Include="Content\Images\PostsImages\post12.3.jpg" />
+    <Content Include="Content\Images\PostsImages\post12.4.jpg" />
+    <Content Include="Content\Images\PostsImages\post12.5.jpg" />
+    <Content Include="Content\Images\PostsImages\post12.6.jpg" />
+    <Content Include="Content\Images\PostsImages\post12.7.jpg" />
     <Content Include="Content\Images\seach-ico.png" />
     <Content Include="Content\css\reset.css" />
     <Content Include="Content\css\style.css" />
@@ -272,6 +291,7 @@
   <ItemGroup>
     <Content Include="Views\Shared\_Layout_Valid.cshtml" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

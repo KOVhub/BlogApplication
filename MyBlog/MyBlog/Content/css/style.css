@@ -19,7 +19,7 @@ body {background: #eeeeee;}
 .wrap-soc-list ul li span {margin-left: 5px;}
 .wrap-soc-list ul li span,.wrap-soc-list ul li img  {vertical-align: middle}
 
-.wrap-comments h2 {line-height: 43px; padding-left: 11px; color: #fff; background: #75af68; font-weight: normal; font-size: 24px;}
+.wrap-comments h2 {line-height: 43px; padding-left: 11px; color: #fff; background: #3e9a76; font-weight: normal; font-size: 24px;}
 .wrap-comments .list-comment li {list-style: none; overflow: hidden; padding: 20px 0 20px; margin-bottom: 10px; border-bottom: 1px solid #e2e2e2;}
 .wrap-comments .list-comment li .avatar {float: left; padding-right: 10px;}
 .wrap-comments .list-comment li .comment-text {overflow: hidden;}
@@ -33,7 +33,7 @@ body {background: #eeeeee;}
     -moz-box-sizing: border-box;
     box-sizing: border-box;}
 
-.add-post .txt-area {width: 100%; padding: 10px; height: 500px; border-radius: 5px; border-color: #dcdcdc;
+.add-post .txt-area {width: 100%; padding: 10px; height: 450px; border-radius: 5px; border-color: #dcdcdc;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;}
@@ -72,14 +72,13 @@ textarea:-ms-input-placeholder {color: #ced7d7;}
 .search-form button {width: 55px; height: 48px;float: left; vertical-align: middle; margin-left: -6px; border: 0; background: url(../Images/seach-ico.png) no-repeat center #68afaf}
 
 .posts-wrap h3 {line-height: 42px; background: #68af93; font-size: 20px; color: #fff; font-weight: normal; padding-left: 20px;}
-.posts-wrap.color h3 {background: #75af68;}
+.posts-wrap.color h3 {background: #3E9A76;}
 .posts-wrap ul {padding: 0 0 50px 20px;}
 .posts-wrap li {padding-top: 20px; list-style: none;}
 .posts-wrap li .date {color: #959595; font-size: 14px; margin-bottom: 5px;}
 .posts-wrap li .post {font-size: 16px;}
 
 .img-center img {display: block; margin-left: auto; margin-right: auto;}
-
 
 @media screen and (min-width: 980px) {
     .wrap {width: 980px; margin: 0 auto 60px;}
